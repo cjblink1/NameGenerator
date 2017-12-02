@@ -1,4 +1,5 @@
 '''BandNameGenerator module'''
+# pylint: disable = R0201
 from Generator import Generator
 from CategoryPickingBehavior import CategoryPickingBehavior
 class BandNameGenerator(Generator):

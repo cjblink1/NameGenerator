@@ -11,18 +11,19 @@ class Application(object):
 
     def main(self):
         '''Entry method for the NameGeneratior application'''
+        print "\n----------Welcome to the NameGenerator!----------\n"
         print "Which generator would you like to use?"
-        print self.generators.keys()
         for key in self.generators.keys():
             print key
 
+        print ""
         user_selection = raw_input()
 
-        print "You entered: ", user_selection
+        print "\nYou entered: ", user_selection
 
         while not self.generators.has_key(user_selection):
             print user_selection, " is not a valid generator."
-            print "Which generator would you like to use?"
+            print "\nWhich generator would you like to use?"
 
             for key in self.generators.keys():
                 print key

@@ -8,7 +8,8 @@ class BabyNameGenerator(Generator):
     def __init__(self):
         super(BabyNameGenerator, self).__init__()
         self.pair_picking_behavior = CategoryPickingBehavior()
-        self.middle_names = ['Joshua', 'Dudley', 'McDonald', 'Apple', 'Moon', 'Rose', 'Princess', 'Lily']
+        self.middle_names = ['Joshua', 'Dudley', 'McDonald', 'Apple',
+                             'Moon', 'Rose', 'Princess', 'Lily']
 
 
     def get_total_combinations(self):
@@ -22,7 +23,8 @@ class BabyNameGenerator(Generator):
         return ['first names', 'last name']
 
     def get_num_words_per_category(self):
-        '''Returns a list that containes the number of words in each category that the generator will pick from.
+        '''Returns a list that containes the number of words in each category that
+        the generator will pick from.
         The Generator subclass must override this method'''
         return [5, 1]
 
@@ -30,3 +32,4 @@ class BabyNameGenerator(Generator):
         '''Returns a generated name.
         The Generator subclass must override this method'''
         return words[0]+" "+random.choice(self.middle_names)+" "+words[1]
+    

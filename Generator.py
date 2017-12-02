@@ -40,7 +40,7 @@ class Generator(object):
         words_in_this_category = []
         num_words_required = self.get_num_words_per_category()[category_num]
 
-        print "Please enter", num_words_required, self.category_names[category_num], ":"
+        print "\nPlease enter", num_words_required, self.category_names[category_num], ":"
         for _ in range(num_words_required):
             words_in_this_category.append(raw_input())
         return words_in_this_category
@@ -67,7 +67,8 @@ class Generator(object):
                                   "overridden in a Generator subclass")
 
     def get_num_words_per_category(self):
-        '''Returns a list that containes the number of words in each category that the generator will pick from.
+        '''Returns a list that containes the number of words in each category
+        that the generator will pick from.
         The Generator subclass must override this method'''
         raise NotImplementedError("get_num_words_per_category() should be "+
                                   "overridden in a Generator subclass")
