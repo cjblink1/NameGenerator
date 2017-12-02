@@ -1,5 +1,5 @@
 # NameGenerator
-This project was inspired by Brian Krawiec in December 2017. The application generates names for various things.
+This project was inspired by Brian Krawiec in December 2017. The application generates names for various things. It employs the Strategy pattern and the Template Method pattern.
 
 ## To Run:
 1. Download the .zip file
