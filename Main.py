@@ -4,7 +4,7 @@ from BandNameGenerator import BandNameGenerator
 from StreetNameGenerator import StreetNameGenerator
 from BabyNameGenerator import BabyNameGenerator
 class Application(object):
-    '''Entry class for the NameGeneratior application'''
+    '''Entry class for the NameGenerator application'''
 
     def __init__(self, generators):
         self.generators = generators
