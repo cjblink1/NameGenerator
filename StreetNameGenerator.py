@@ -1,34 +1,31 @@
-'''BandNameGenerator module'''
+'''StreetNameGenerator module'''
+import random
 from Generator import Generator
-from CategoryPickingBehavior import CategoryPickingBehavior
-class BandNameGenerator(Generator):
-    '''BandNameGenerator class generates a name for a band'''
+from SingleListPickingBehavior import SingleListPickingBehavior
+class StreetNameGenerator(Generator):
+    '''StreetNameGenerator class.'''
 
     def __init__(self):
-        super(BandNameGenerator, self).__init__()
-        self.pair_picking_behavior = CategoryPickingBehavior()
+        super(StreetNameGenerator, self).__init__()
+        self.pair_picking_behavior = SingleListPickingBehavior()
+        self.street_suffixes = ['Street', 'Avenue', 'Place', 'Court', 'Drive', 'Road']
 
     def get_total_combinations(self):
         '''Returns the total number of combinations that the generator will generate.
         The Generator subclass must override this method'''
-        return 25
-
-    def get_num_categories(self):
-        '''Returns the number of categories that the generator will pick from.
-        The Generator subclass must override this method'''
-        return 1
+        return 8*6
 
     def get_category_names(self):
         '''Returns the manes of the categories that the generator will pick from.
         The Generator subclass must override this method'''
-        return ['adjectives', 'animals']
+        return ['presidents', 'dog species', 'tree species']
 
     def get_num_words_per_category(self):
         '''Returns the number of words in each category that the generator will pick from.
         The Generator subclass must override this method'''
-        return [5, 5]
+        return [4, 2, 2]
 
     def concatenate_name(self, *words):
         '''Returns a generated name.
         The Generator subclass must override this method'''
-        return ('The '+words[0]+' '+words[1]+'s').title()
+        return (words[0]+" "+random.choice(self.street_suffixes)).title()

@@ -1,7 +1,8 @@
 '''Main module for NameGeneratior appliction'''
 # pylint: disable=R0903
-from Generator import Generator
 from BandNameGenerator import BandNameGenerator
+from StreetNameGenerator import StreetNameGenerator
+from BabyNameGenerator import BabyNameGenerator
 class Application(object):
     '''Entry class for the NameGeneratior application'''
 
@@ -32,6 +33,8 @@ class Application(object):
         selected_generator.generate_names()
 
 
-GENERATORS = {'Band Name': BandNameGenerator()}
+GENERATORS = {'Band Name': BandNameGenerator(),
+              'Street Name': StreetNameGenerator(),
+              'Baby Name': BabyNameGenerator()}
 APP = Application(GENERATORS)
 APP.main()

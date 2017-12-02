@@ -13,7 +13,7 @@ class SingleListPickingBehavior(PairPickingBehavior):
             all_words.extend(category)
 
         first_word_choice = random.choice(all_words)
-        # all_words.remove(first_word_choice)
+        all_words.remove(first_word_choice)
         second_word_choice = random.choice(all_words)
 
         return (first_word_choice, second_word_choice)
