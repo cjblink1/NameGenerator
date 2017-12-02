@@ -1,5 +1,5 @@
 # NameGenerator
-This project was inspired by Brian Krawiek in December 2017. The application generates names for various things.
+This project was inspired by Brian Krawiec in December 2017. The application generates names for various things.
 
 ## To Run:
 1. Download the .zip file
