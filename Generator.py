@@ -67,7 +67,7 @@ class Generator(object):
                                   "overridden in a Generator subclass")
 
     def get_num_words_per_category(self):
-        '''Returns a list that containes the number of words in each category
+        '''Returns a list that contains the number of words in each category
         that the generator will pick from.
         The Generator subclass must override this method'''
         raise NotImplementedError("get_num_words_per_category() should be "+
