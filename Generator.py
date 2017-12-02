@@ -61,7 +61,7 @@ class Generator(object):
                                   "overridden in a Generator subclass")
 
     def get_category_names(self):
-        '''Returns the manes of the categories that the generator will pick from.
+        '''Returns the names of the categories that the generator will pick from.
         The Generator subclass must override this method'''
         raise NotImplementedError("get_category_names() should be "+
                                   "overridden in a Generator subclass")
